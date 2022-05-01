@@ -47,8 +47,8 @@
                 app:layout_constraintStart_toEndOf="@+id/imageViewPName"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPName" />
 
-            <Button
-                android:id="@+id/button"
+            <TextView
+                android:id="@+id/textViewPPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="87dp"
