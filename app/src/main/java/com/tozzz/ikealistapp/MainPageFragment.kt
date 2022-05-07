@@ -1,10 +1,9 @@
 package com.tozzz.ikealistapp
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tozzz.ikealistapp.databinding.FragmentMainPageBinding
 
@@ -13,17 +12,16 @@ class MainPageFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         design = FragmentMainPageBinding.inflate(inflater, container, false)
 
-        design.toolbarMainPage.title = "IKEA"
         design.recyclerView.layoutManager = StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL)
 
         val productList = ArrayList<Products>()
-        val p1 = Products(1,"MÖRBYLANGA","table1",8.499,"meşe kaplama-kahverengi")
+        val p1 = Products(1,"MÖRBYLANGA","table1",8.499,"kahverengi")
         val p2 = Products(2,"NORDEN","table2",2.599,"beyaz")
-        val p3 = Products(3,"INGATORP","table3",3.599,"yemek masası, meşe kaplama-kahverengi")
-        val p4 = Products(4,"INGATORP","table4",3.599,"beyaz")
-        val p5 = Products(5,"MÖRBYLANGA","table5",8.499,"kahverengi")
-        val p6 = Products(6,"MÖRBYLANGA","table6",8.499,"beyaz")
-        val p7 = Products(7,"MÖRBYLANGA","table7",8.499,"siyah")
+        val p3 = Products(3,"INGATORP","table3",3.599,"beyaz")
+        val p4 = Products(4,"INGATORP","table4",1.599,"beyaz")
+        val p5 = Products(5,"GLIVARP","table5",3.299,"kahverengi")
+        val p6 = Products(6,"INGATORP","table6",1.599,"kahverengi")
+        val p7 = Products(7,"DANDERYD","table7",2.799,"siyah")
 
         productList.add(p1)
         productList.add(p2)
@@ -38,5 +36,6 @@ class MainPageFragment : Fragment() {
 
         return design.root
     }
+
 
 }
